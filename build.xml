@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="pkg_wishboxmodulbank" default="make" basedir=".">
+    <property name="package" value="pkg_wishboxmodulbank.zip"/>
+
+    <target name="make" description="Build the Joomla package.">
+        <delete quiet="yes">
+            <fileset dir=".">
+                <include name="${package}"/>
+            </fileset>
+        </delete>
+
+        <zip destfile="lib_wishboxmodulbank.zip">
+            <fileset dir="./lib_wishboxmodulbank">
+                <include name="language/**"/>
+                <include name="src/**"/>
+                <include name="lib_wishboxmodulbank.xml"/>
+            </fileset>
+        </zip>
+
+        <zip destfile="${package}">
+            <fileset dir=".">
+                <include name="lib_wishboxmodulbank.zip"/>
+                <include name="language/**"/>
+                <include name="script.php"/>
+                <include name="pkg_wishboxmodulbank.xml"/>
+            </fileset>
+        </zip>
+
+        <delete quiet="yes">
+            <fileset dir=".">
+                <include name="lib_wishboxmodulbank.zip"/>
+            </fileset>
+        </delete>
+    </target>
+</project>

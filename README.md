@@ -2,6 +2,8 @@
 
 Joomla library package for creating payment links through ModulBank internet acquiring.
 
+The package installs the payment-link library and the `System - Wishbox ModulBank` plugin. The plugin stores the merchant identifier and test-mode setting used by Wishbox integrations.
+
 ## Requirements
 
 - PHP 8.5 or later with the cURL extension;
@@ -19,6 +21,8 @@ $paymentUrl = $service->create($params);
 ```
 
 The `$params` array must contain the fields required by the ModulBank bill creation API, including the merchant identifier and request signature.
+
+After installation, open the Joomla plugin manager, find `System - Wishbox ModulBank`, and configure its merchant identifier and test mode. The package installer enables the plugin automatically on its first installation.
 
 ## Tests
 

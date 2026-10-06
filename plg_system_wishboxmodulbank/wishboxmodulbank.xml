@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>plg_system_wishboxmodulbank</name>
+    <author>Nekrasov Vitaliy</author>
+    <creationDate>October 2026</creationDate>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>nekrasov_vitaliy@list.ru</authorEmail>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_WISHBOXMODULBANK_XML_DESCRIPTION</description>
+    <namespace path="src">Joomla\Plugin\System\WishboxModulBank</namespace>
+    <scriptfile>script.php</scriptfile>
+    <files>
+        <folder plugin="wishboxmodulbank">services</folder>
+        <folder>src</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_system_wishboxmodulbank.ini</language>
+        <language tag="en-GB">language/en-GB/plg_system_wishboxmodulbank.sys.ini</language>
+        <language tag="ru-RU">language/ru-RU/plg_system_wishboxmodulbank.ini</language>
+        <language tag="ru-RU">language/ru-RU/plg_system_wishboxmodulbank.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="test_mode"
+                        type="list"
+                        label="PLG_SYSTEM_WISHBOXMODULBANK_TEST_MODE_LABEL"
+                        description="PLG_SYSTEM_WISHBOXMODULBANK_TEST_MODE_DESCRIPTION"
+                        layout="joomla.form.field.radio.switcher"
+                        default="0"
+                        filter="boolean"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="merchant_id"
+                        type="text"
+                        label="PLG_SYSTEM_WISHBOXMODULBANK_MERCHANT_ID_LABEL"
+                        description="PLG_SYSTEM_WISHBOXMODULBANK_MERCHANT_ID_DESCRIPTION"
+                        filter="string"
+                />
+                <field
+                        name="secret_key"
+                        type="text"
+                        label="PLG_SYSTEM_WISHBOXMODULBANK_SECRET_KEY_LABEL"
+                        description="PLG_SYSTEM_WISHBOXMODULBANK_SECRET_KEY_DESCRIPTION"
+                        filter="string"
+                />
+                <field
+                        name="test_secret_key"
+                        type="text"
+                        label="PLG_SYSTEM_WISHBOXMODULBANK_TEST_SECRET_KEY_LABEL"
+                        description="PLG_SYSTEM_WISHBOXMODULBANK_TEST_SECRET_KEY_DESCRIPTION"
+                        filter="string"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

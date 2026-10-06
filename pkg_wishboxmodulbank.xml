@@ -15,5 +15,6 @@
     </languages>
     <files>
         <file type="library" id="wishboxmodulbank">lib_wishboxmodulbank.zip</file>
+        <file type="plugin" group="system" id="wishboxmodulbank">plg_system_wishboxmodulbank.zip</file>
     </files>
 </extension>

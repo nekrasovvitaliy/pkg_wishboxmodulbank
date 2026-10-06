@@ -27,7 +27,7 @@ final readonly class PaymentLinkCreationService
 	private const string DEFAULT_ENDPOINT = 'https://pay.modulbank.ru/api/v1/bill/';
 
 	/**
-	 * Initialise the payment link service.
+	 * Initialize the payment link service.
 	 *
 	 * @param int    $timeout  Request timeout in seconds.
 	 * @param string $endpoint ModulBank bill API endpoint.

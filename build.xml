@@ -17,9 +17,20 @@
             </fileset>
         </zip>
 
+        <zip destfile="plg_system_wishboxmodulbank.zip">
+            <fileset dir="./plg_system_wishboxmodulbank">
+                <include name="language/**"/>
+                <include name="services/**"/>
+                <include name="src/**"/>
+                <include name="script.php"/>
+                <include name="wishboxmodulbank.xml"/>
+            </fileset>
+        </zip>
+
         <zip destfile="${package}">
             <fileset dir=".">
                 <include name="lib_wishboxmodulbank.zip"/>
+                <include name="plg_system_wishboxmodulbank.zip"/>
                 <include name="language/**"/>
                 <include name="script.php"/>
                 <include name="pkg_wishboxmodulbank.xml"/>
@@ -29,6 +40,7 @@
         <delete quiet="yes">
             <fileset dir=".">
                 <include name="lib_wishboxmodulbank.zip"/>
+                <include name="plg_system_wishboxmodulbank.zip"/>
             </fileset>
         </delete>
     </target>
